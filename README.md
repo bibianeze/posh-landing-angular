@@ -1,59 +1,18 @@
-# PoshLandingAngular
+# POSH Landing Page — Angular Rebuild
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.21.
+A rebuild of the POSH landing page (originally static HTML/CSS/JS) as a proper Angular application, using standalone components, Signals, `@Input()`/`@Output()`, typed interfaces, control flow (`@for`/`@if`), routing, and Reactive Forms.
 
-## Development server
+## Running locally
 
-To start a local development server, run:
-
-```bash
+\`\`\`bash
+git clone git@github.com:bibianeze/posh-landing-angular.git
+cd posh-landing-angular
+npm install
 ng serve
-```
+\`\`\`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open `http://localhost:4200` in your browser.
 
-## Code scaffolding
+## How the page was split into components
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The original single HTML file was broken into one component per visual section: `Navbar`, `Hero`, `Showcase`, `ImgCard`, `Features`, `Contact`, `Cta`, and `Footer`, each with its own template and scoped CSS. `Navbar` and `Footer` sit in the root `App` shell so they appear on every page, while `Hero`, `Showcase`, `Features`, `Contact`, and `Cta` live inside a `Home` page component, rendered through the Angular Router alongside a second `About` page. The 30 showcase demos are defined as a single typed array (`ShowcaseItem[]`) in `Showcase` and rendered by looping a single reusable `ImgCard` component with `@for`, receiving `title`, `subtitle`, and `imgId` via `@Input()`, instead of hand-writing 30 near-identical HTML blocks. The `Hero`'s CTA button uses `@Output()` to notify its parent when clicked, and the `Contact` component uses Reactive Forms with two custom validators (blank-check and email format), a submit button disabled until the form is valid, and a Signal-driven success state.
