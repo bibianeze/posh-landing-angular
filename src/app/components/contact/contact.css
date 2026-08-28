@@ -1,0 +1,70 @@
+.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  border: #2b6ef2 1px solid;
+  border-radius: 8px;
+  box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  color: #2b6ef2;
+  margin-bottom: 40px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--color-gray);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: var(--font-main);
+  font-size: 14px;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.btn-primary[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.thanks {
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-black);
+  padding: 40px 0;
+}
+button{
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 37px;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}

@@ -1,0 +1,15 @@
+<section  class="showcase" id="showcase">
+  <p class="showcase-quote">
+    No matter the task, the new POSH is up to it — and even more. See for yourself —
+    all the pre-made demos, inspired by world's finest websites, are
+    <strong>made with POSH.</strong> And this is only a tip of the iceberg of what you will get.
+  </p>
+
+  <hr class="showcase-divider" />
+
+  <div class="demo-grid">
+    @for (card of cards; track card.title) {
+      <app-img-card [title]="card.title" [subtitle]="card.subtitle" [imgId]="card.imgId" />
+    }
+  </div>
+</section>

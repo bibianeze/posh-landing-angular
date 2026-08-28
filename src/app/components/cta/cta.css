@@ -1,0 +1,47 @@
+.cta {
+  text-align: center;
+  padding: 0 24px 140px;
+}
+
+.cta-divider {
+  width: 80px;
+  border: none;
+  border-top: 1px solid #b8b6b6;
+  margin: 0 auto 90px;
+}
+
+.cta-text {
+  font-size: 21px;
+  font-weight: 100;
+  color: var(--color-black);
+  margin-bottom: 30px;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 37px;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding-bottom: 90px;
+  }
+
+  .cta-divider {
+    margin-bottom: 70px;
+  }
+
+  .cta-text {
+    font-size: 20px;
+  }
+}

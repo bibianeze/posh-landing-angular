@@ -1,0 +1,44 @@
+:host {
+  display: contents;
+}
+.demo-card {
+  overflow: hidden;
+  text-align: center;
+}
+
+.demo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.demo-link h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.demo-link p {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 23px;
+  transition: color 0.2s ease;
+}
+
+.demo-link:hover h3,
+.demo-link:hover p {
+  text-decoration: underline;
+}
+
+.demo-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.35s ease;
+}
+
+.demo-card:hover img {
+  transform: scale(1.04);
+}
